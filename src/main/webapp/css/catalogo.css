@@ -1,0 +1,42 @@
+.jumbotron {
+    background: rgb(71, 167, 224);
+    background: linear-gradient(135deg, rgba(71, 167, 224, 1) 0%, rgba(190, 81, 90, 1) 100%);
+    color: white;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    background-color: rgb(158, 158, 158);
+}
+
+.swiper {
+    width: 250px;
+    height: 400px;
+    margin-top: 25px;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.swiper-slide a {
+    width: 95%;
+}
+
+@media (max-width:405px) {
+    .swiper {
+        width: 60%;
+    }
+    .swiper-slide a {
+        width: 100%;
+    }
+}

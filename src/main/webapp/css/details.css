@@ -1,0 +1,48 @@
+.bg-primaryColor {
+    background-image: linear-gradient(to right, rgba(14.51%, 24.71%, 29.41%, 1.00) 150px, rgba(14.51%, 24.71%, 29.41%, 1.00) 100%);
+}
+
+.imgDetails {
+    width: 90%;
+    border-radius: 0.5em;
+}
+
+.swiper {
+    width: 100%;
+    height: 65vh;
+}
+
+.swiper-slide {
+    width: 6.25em;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardSlider {
+    width: 100%;
+}
+
+.imgGallery {
+    width: 90%;
+}
+
+.btn {
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .imgDetails {
+        width: 60%;
+        border-radius: 0.5em;
+    }
+    .infoPeli {
+        text-align: center;
+        margin-top: 1em;
+    }
+    .cardSlider {
+        width: 70%;
+    }
+}

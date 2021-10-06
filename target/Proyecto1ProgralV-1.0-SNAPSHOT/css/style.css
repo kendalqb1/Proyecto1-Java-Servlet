@@ -1,0 +1,111 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #e6e6e6;
+}
+
+.navbar {
+    box-shadow: 2px 2px 5px #000;
+    opacity: 1;
+}
+
+.navbar .nav-item .nav-link {
+    color: #fff;
+}
+
+.main-header {
+    background: url('https://www.xtrafondos.com/descargar.php?id=3326&resolucion=1920x1080');
+    background-size: cover;
+    min-height: 673px;
+}
+
+.bg-trans {
+    background: rgba(52, 58, 64, 0.40);
+    padding: 2em;
+    border-radius: 2em;
+}
+
+header {
+    box-shadow: 2px 2px 5px #000;
+    opacity: 0.9;
+}
+
+a img {
+    border-radius: 0.5em;
+}
+
+.swiper {
+    width: 100%;
+    padding-bottom: 3.125em;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 15.75em;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+div section a {
+    border-radius: 50%;
+}
+
+.videoTrailer {
+    width: 100%;
+}
+
+.imgAside {
+    width: 78%;
+    border-radius: 0.5em;
+}
+
+.parrafo-grande {
+    font-size: 1.1em;
+}
+
+.icon-card {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+    color: #343a40;
+}
+
+.fondoGradiente {
+    background: rgb(71, 167, 224);
+    background: linear-gradient(135deg, rgba(71, 167, 224, 1) 0%, rgba(190, 81, 90, 1) 100%);
+    color: white;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titlePequenno {
+    height: 20vh;
+}
+
+.fa-chevron-down {
+    font-size: 3em;
+    color: white;
+}
+
+.fa-chevron-down:hover {
+    color: rgb(184, 159, 162);
+}
+
+@media (max-width:405px) {
+    .navbar-brand {
+        width: 70%;
+    }
+}
+
+@media (max-width: 900px) {
+    .main-header {
+        background-position: center;
+    }
+}
