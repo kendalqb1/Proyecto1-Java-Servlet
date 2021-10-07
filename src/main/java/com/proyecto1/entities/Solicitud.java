@@ -9,11 +9,12 @@ public class Solicitud {
     Integer cantidad;
     String categorias;
     String comentario;
+    String pelicula;
 
     public Solicitud() {
     }
 
-    public Solicitud(String nombre, String correo, String tarjeta, String telefono, String preferenciaCompra, Integer cantidad, String categorias, String comentario) {
+    public Solicitud(String nombre, String correo, String tarjeta, String telefono, String preferenciaCompra, Integer cantidad, String categorias, String comentario, String pelicula) {
         this.nombre = nombre;
         this.correo = correo;
         this.tarjeta = tarjeta;
@@ -22,6 +23,7 @@ public class Solicitud {
         this.cantidad = cantidad;
         this.categorias = categorias;
         this.comentario = comentario;
+        this.pelicula = pelicula;
     }
 
     public String getNombre() {
@@ -68,7 +70,7 @@ public class Solicitud {
         return cantidad;
     }
 
-    public void setCatidad(Integer cantidad) {
+    public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
     }
 
@@ -88,6 +90,14 @@ public class Solicitud {
         this.comentario = comentario;
     }
 
+    public String getPelicula() {
+        return pelicula;
+    }
+
+    public void setPelicula(String pelicula) {
+        this.pelicula = pelicula;
+    }
+
     @Override
     public String toString() {
         return "Solicitud{" +
@@ -96,9 +106,10 @@ public class Solicitud {
                 ", tarjeta='" + tarjeta + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", preferenciaCompra='" + preferenciaCompra + '\'' +
-                ", catidad=" + cantidad +
+                ", cantidad=" + cantidad +
                 ", categorias='" + categorias + '\'' +
                 ", comentario='" + comentario + '\'' +
+                ", pelicula='" + pelicula + '\'' +
                 '}';
     }
 }

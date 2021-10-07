@@ -24,6 +24,7 @@ public class SolicitudServlet extends HttpServlet {
         Integer cantidad = 0;
         String categorias = "";
         String comentario = "";
+        String pelicula = "Luca";
         Solicitud solicitud;
 
         try {
@@ -35,7 +36,7 @@ public class SolicitudServlet extends HttpServlet {
             cantidad = Integer.parseInt(request.getParameter("cantidad"));
             categorias = request.getParameter("states[]");
             comentario = request.getParameter("comentario");
-            solicitud = new Solicitud(nombre, correo, tarjeta, telefono, preferenciaCompra, cantidad, categorias, comentario);
+            solicitud = new Solicitud(nombre, correo, tarjeta, telefono, preferenciaCompra, cantidad, categorias, comentario, pelicula);
             request.setAttribute("solicitud", solicitud);
             request.getRequestDispatcher("mostrarSolicitud.jsp").forward(request, response);
         } catch (Exception e) {

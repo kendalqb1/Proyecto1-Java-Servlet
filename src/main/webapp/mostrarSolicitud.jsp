@@ -29,68 +29,72 @@
     <div>
         <h1>Informacion recibida</h1>
         <p class="lead">Su compra se realizado exitosamente</p>
-        <div class="table-responsive">
-            <table class="table table-hover text-center mt-5">
-                <thead>
-                <tr>
-                    <th scope="col">Icono</th>
-                    <th scope="col">Informacion</th>
-                    <th scope="col">Detalle</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><i class="fas fa-user"></i></td>
-                    <td>Nombre</td>
-                    <td>${requestScope.solicitud.nombre}</td>
-                </tr>
-                <tr>
-                    <td><i class="fas fa-envelope"></i></td>
-                    <td>Correo</td>
-                    <td>${requestScope.solicitud.correo}</td>
-                </tr>
-                <tr>
-                    <td><i class="far fa-credit-card"></i></td>
-                    <td>Tarjeta</td>
-                    <td>${requestScope.solicitud.tarjeta}</td>
-                </tr>
-                <tr>
-                    <td><i class="fas fa-phone-square"></i></td>
-                    <td>Telefono</td>
-                    <td>${requestScope.solicitud.telefono}</td>
-                </tr>
-                <tr>
-                    <td><i class="fas fa-shopping-basket"></i></td>
-                    <td>Preferencia</td>
-                    <td>${requestScope.solicitud.preferenciaCompra}</td>
-                </tr>
-                <tr>
-                    <td><i class="fas fa-calculator"></i></td>
-                    <td>Cantidad</td>
-                    <td>${requestScope.solicitud.cantidad}</td>
-                </tr>
-                <tr>
-                    <td><i class="fas fa-percentage"></i></td>
-                    <td>Descuento 5%</td>
-                    <td>${(requestScope.solicitud.cantidad * 2000) * 0.05}</td>
-                </tr>
-                <tr>
-                    <td><i class="fas fa-calculator"></i></td>
-                    <td>Total</td>
-                    <td>${(requestScope.solicitud.cantidad * 2000) - ((requestScope.solicitud.cantidad * 2000) * 0.05) }</td>
-                </tr>
-                <tr>
-                    <td><i class="fas fa-film"></i></td>
-                    <td>Categorias</td>
-                    <td>${requestScope.solicitud.categorias}</td>
-                </tr>
-                <tr>
-                    <td><i class="fas fa-comments"></i></td>
-                    <td>Comentario</td>
-                    <td>${requestScope.solicitud.comentario}</td>
-                </tr>
-                </tbody>
-            </table>
+        <div class="row mt-4">
+            <div class="col-md-5">
+                <div class="card text-left">
+                    <div class="card-header">
+                        <h5>Informacion del cliente</h5>
+                    </div>
+                    <div class="card-body">
+                        <p> <b>Cliente:</b> ${requestScope.solicitud.nombre} <br>
+                            <b>Correo:</b> ${requestScope.solicitud.correo} <br>
+                            <b>Telefono:</b> ${requestScope.solicitud.telefono} <br>
+                            <b>Tarjeta:</b> ${requestScope.solicitud.tarjeta}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <div class="card text-left">
+                    <div class="card-header">
+                        <h5>Informacion de la factura</h5>
+                    </div>
+                    <div class="card-body">
+                        <p> <b>Fecha:</b> 07/10/2021 <br>
+                            <b>Hora:</b> 02:05pm <br>
+                            <b>Transaccion:</b> #002 <br>
+                            <b>Preferencia:</b> ${requestScope.solicitud.preferenciaCompra}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-hover text-center mt-4">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Pelicula</th>
+                <th scope="col">Subtotal</th>
+                <th scope="col">Descuesto</th>
+                <th scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>${requestScope.solicitud.cantidad}</td>
+                <td>${requestScope.solicitud.pelicula}</td>
+                <td>₡${(requestScope.solicitud.cantidad * 2000)}</td>
+                <td>₡${(requestScope.solicitud.cantidad * 2000) * 0.05}</td>
+                <td>₡${(requestScope.solicitud.cantidad * 2000) - ((requestScope.solicitud.cantidad * 2000) * 0.05) }</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-3">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Mayor informacion</h5>
+                    <p>
+                        <b>Categorias:</b> ${requestScope.solicitud.categorias} <br>
+                        <b>Cometarios:</b> ${requestScope.solicitud.comentario}
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
